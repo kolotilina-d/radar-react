@@ -1,23 +1,8 @@
-import { useState } from "react";
-import { Document, Page } from "react-pdf";
 import pdf1 from "./fs1.pdf";
+import pdf2 from "./fs2.pdf";
 import pdf3 from "./fs3.pdf";
 import pdf4 from "./fs4.pdf";
 export default function FireSafety() {
-  const [isOpen, setIsOpen] = useState(true);
-  function handleClick() {
-    if (isOpen === false) {
-      setIsOpen(true);
-    } else setIsOpen(false);
-  }
-
-  const [numPages, setNumPages] = useState();
-  // const [pageNumber, setPageNumber] = useState(1);
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
-
   return (
     <div className="main">
       <div className="fire-safety">
@@ -101,79 +86,116 @@ export default function FireSafety() {
         </li>
         (по&nbsp;материалам сайта МЧС РФ&nbsp;mchs.gov.ru)
       </ul>
-      <div className="wrapper_for_docs" style={{textAlign: "center"}}>
-        <h2>Удостоверение о повышении квалификации от 16.03.2023 г.</h2>
+      <div className="wrapper_for_docs" style={{ textAlign: "center" }}>
         <div className="fire__img">
-          <button className="answer__button" onClick={() => handleClick()}>
-            <img
-              src="повышение_квалиф.jpg"
-              alt="Удостоверение о повышении квалификации"
-              className={isOpen ? "smallImg" : "bigImg"}
-            />
-          </button>
-          <div className="pdf__wrapper">
-            <div className="pdf-div">
-              <h2>
-                Инструкция о мерах пожарной безопасности
-              </h2>
-              <Document
-                file={pdf1}
-                onLoadSuccess={onDocumentLoadSuccess}
+          <div className="pdf-div">
+            <h2>Удостоверение о повышении квалификации от 16.03.2023 г.</h2>
+            <div className="doc__container">
+              <img
+                src="/повышение_квалиф.jpg"
+                alt="document"
+                className="img_of_doc"
+              />
+            </div>
+            <div className="wrapper">
+              <a
+                href={pdf2}
+                target="_blank"
+                rel="noreferrer"
+                download="udostoverenie.pdf"
+                className="link_to_doc"
               >
-                {Array.apply(null, Array(numPages))
-                  .map((x, i) => i + 1)
-                  .map((page) => {
-                    return (
-                      <Page
-                        pageNumber={page}
-                        renderTextLayer={false}
-                        renderAnnotationLayer={false}
-                      />
-                    );
-                  })}
-              </Document>
+                Скачать документ
+              </a>
+              <a
+                href={pdf2}
+                target="_blank"
+                rel="noreferrer"
+                className="link_to_doc"
+              >
+                Открыть документ
+              </a>
+            </div>
+          </div>
+          <div className="pdf-div">
+            <h2>Инструкция о мерах пожарной безопасности</h2>
+            <div className="doc__container">
+              <img
+                src="/инструкции.png"
+                alt="document"
+                className="img_of_doc"
+              />
+            </div>
+            <div className="wrapper">
+              <a
+                href={pdf1}
+                target="_blank"
+                rel="noreferrer"
+                download="instrukcia.pdf"
+                className="link_to_doc"
+              >
+                Скачать документ
+              </a>
+              <a
+                href={pdf1}
+                target="_blank"
+                rel="noreferrer"
+                className="link_to_doc"
+              >
+                Открыть документ
+              </a>
+            </div>
+          </div>
+          <div className="pdf-div">
+            <h2>Памятка по правилам пожарной безопасности</h2>
+            <div className="doc__container">
+              <img src="/памятка.png" alt="document" className="img_of_doc" />
+            </div>
+            <div className="wrapper">
+              <a
+                href={pdf4}
+                target="_blank"
+                rel="noreferrer"
+                download="pamjatka.pdf"
+                className="link_to_doc"
+              >
+                Скачать документ
+              </a>
+              <a
+                href={pdf4}
+                target="_blank"
+                rel="noreferrer"
+                className="link_to_doc"
+              >
+                Открыть документ
+              </a>
             </div>
             <div className="pdf-div">
               <h2>
                 Приказ о назначении ответственных лиц за пожарную безопасность
               </h2>
-              <Document
-                file={pdf3}
-                onLoadSuccess={onDocumentLoadSuccess}
-              >
-                {Array.apply(null, Array(numPages))
-                  .map((x, i) => i + 1)
-                  .map((page) => {
-                    return (
-                      <Page
-                        pageNumber={page}
-                        renderTextLayer={false}
-                        renderAnnotationLayer={false}
-                      />
-                    );
-                  })}
-              </Document>
-            </div>
-            <div className="pdf-div">
-              <h2>
-                Памятка по правилам пожарной безопасности
-              </h2>
-              <Document
-                file={pdf4}
-                onLoadSuccess={onDocumentLoadSuccess}
-              >
-                {Array.apply(null, Array(numPages))
-                  .map((x, i) => i + 1)
-                  .map((page) => {
-                    return (
-                      <Page
-                        pageNumber={page}
-                        renderTextLayer={false}
-                        renderAnnotationLayer={false}
-                      />
-                    );
-                  })}
-              </Document>
+              <div className="doc__container">
+                <img src="/приказ.png" alt="document" className="img_of_doc" />
+              </div>
+              <div className="wrapper">
+                <a
+                  href={pdf3}
+                  target="_blank"
+                  rel="noreferrer"
+                  download="приказ.pdf"
+                  className="link_to_doc"
+                >
+                  Скачать документ
+                </a>
+                <a
+                  href={pdf3}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link_to_doc"
+                >
+                  Открыть документ
+                </a>
+              </div>
             </div>
           </div>
         </div>

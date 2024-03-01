@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className="header">
       <ul className="header__navigation">
-        <li className="header__item">
+        <li className="header__item" >
           <Link to="/main" className="header__link">
             Главная
           </Link>

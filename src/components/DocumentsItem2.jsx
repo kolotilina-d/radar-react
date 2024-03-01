@@ -1,47 +1,33 @@
-import { Component } from "react";
-import { Document, Page, pdfjs } from "react-pdf";
+import BackButton from "./BackButton";
 import doc from "./nalog_uchet.pdf";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-class DocumentsItem2 extends Component {
-  state = { numPages: null, pageNumber: 1 };
 
-  onDocumentLoadSuccess = ({ numPages }) => {
-    this.setState({ numPages });
-  };
-
-  goToPrevPage = () =>
-    this.setState((state) => ({ pageNumber: state.pageNumber - 1 }));
-  goToNextPage = () =>
-    this.setState((state) => ({ pageNumber: state.pageNumber + 1 }));
-
-  render() {
-    const { pageNumber, numPages } = this.state;
-
-    return (
-      <>
-        <p className="doc_h1">Свидетельтво о постановке на налоговый учет</p>
-        <div className="doc__container">
-          <div className="doc__wrapper" style={{ width: 600 }}>
-            <Document file={doc} onLoadSuccess={this.onDocumentLoadSuccess}>
-              <Page pageNumber={pageNumber} width={400} />
-            </Document>
-          </div>
-          <nav>
-            <button className="doc__button" onClick={this.goToPrevPage}>
-              Назад
-            </button>
-            <button className="doc__button" onClick={this.goToNextPage}>
-              Вперед
-            </button>
-          </nav>
-
-          <p>
-            Page {pageNumber} of {numPages}
-          </p>
-        </div>
-      </>
-    );
-  }
+function DocumentsItem6() {
+  return (
+    <>
+    <BackButton/>
+      <h2 className="doc_h1">Свидетельтво о постановке на налоговый учет </h2>
+      <div className="doc__container">
+        <img
+          src="/Свидетельство о постановке на налоговый учет.jpg"
+          alt="document"
+          className="img_of_doc"
+        />
+      </div>
+      <div className="wrapper">
+        <a
+          href={doc}
+          target="_blank"
+          rel="noreferrer"
+          download="Свидетельтво_о_постановке_на_налоговый_учет.pdf"
+          className="link_to_doc"
+        >
+          Скачать документ
+        </a>
+        <a href={doc} target="_blank" rel="noreferrer" className="link_to_doc">
+          Открыть документ
+        </a>
+      </div>
+    </>
+  );
 }
-
-export default DocumentsItem2;
+export default DocumentsItem6;

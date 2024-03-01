@@ -37,7 +37,7 @@ export default function Contacts() {
         <li className="contacts__phone">+79114744589</li>
       </ul>
       <span className="contacts__subtitle">
-        C уважением, Правление СНТ &quot;Радар&quot;
+        C уважением, Правление СНТ &#171;РАДАР&#187;
       </span>
     </section>
   );

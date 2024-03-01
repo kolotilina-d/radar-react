@@ -1,44 +1,29 @@
-import { Component } from "react";
-import { Document, Page, pdfjs } from "react-pdf";
+import BackButton from "./BackButton";
 import doc from "./pravila.pdf";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-class DocumentsItem5 extends Component {
-  state = { numPages: null, pageNumber: 1 };
 
-  onDocumentLoadSuccess = ({ numPages }) => {
-    this.setState({ numPages });
-  };
-
-  goToPrevPage = () =>
-    this.setState((state) => ({ pageNumber: state.pageNumber - 1 }));
-  goToNextPage = () =>
-    this.setState((state) => ({ pageNumber: state.pageNumber + 1 }));
-
-  render() {
-    const { pageNumber, numPages } = this.state;
-
-    return (
-      <>
-        <p className="doc_h1">Правила внутреннего распорядка СНТ «РАДАР»</p>
-        <div className="doc__container">
-          <nav className="doc__nav">
-            <button className="doc__button" onClick={this.goToPrevPage}>Назад</button>
-            <button className="doc__button" onClick={this.goToNextPage}>Вперед</button>
-          </nav>
-
-          <div  className="doc__wrapper" >
-            <Document style={{ width: 400 }} file={doc} onLoadSuccess={this.onDocumentLoadSuccess}>
-              <Page style={{ width: 400 }} pageNumber={pageNumber} width={400} />
-            </Document>
-          </div>
-
-          <p className="doc__text">
-            Page {pageNumber} of {numPages}
-          </p>
-        </div>
-      </>
-    );
-  }
+function DocumentsItem6() {
+  return (
+    <>
+      <BackButton />
+      <h2 className="doc_h1">Правила внутреннего распорядка СНТ «РАДАР»</h2>
+      <div className="doc__container">
+        <img src="/pravila.png" alt="document" className="img_of_doc" />
+      </div>
+      <div className="wrapper">
+        <a
+          href={doc}
+          target="_blank"
+          rel="noreferrer"
+          download="Правила_внутреннего_распорядка.pdf"
+          className="link_to_doc"
+        >
+          Скачать документ
+        </a>
+        <a href={doc} target="_blank" rel="noreferrer" className="link_to_doc">
+          Открыть документ
+        </a>
+      </div>
+    </>
+  );
 }
-
-export default DocumentsItem5;
+export default DocumentsItem6;

@@ -93,7 +93,13 @@ form * {
 
 @media screen and (max-width: 690px) {
   .heading__name {
-    font-size: 38px;
+    font-size: 32px;
+  }
+
+  .heading {
+    background: url(./images/buhta.jpg) no-repeat;
+    background-size: 1270px 217px;
+    background-position: center;
   }
 }
 
@@ -170,10 +176,15 @@ form * {
 }
 
 .main__wrapper {
-display: flex;
-flex-direction: column;
-justify-content: center;
-margin: 20px 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 0 40px;
+}
+
+.main__img {
+  max-width: 85vw;
+  margin: 0 auto;
 }
 
 .intro__title {
@@ -511,7 +522,6 @@ margin: 20px 0 40px;
   height: 40vh;
   box-sizing: content-box;
   transition: ease-in 0.3s;
-
 }
 .pdf__wrapper {
   display: flex;
@@ -549,8 +559,6 @@ margin: 20px 0 40px;
   text-align: center;
   font-size: 30px;
 }
-
-
 
 .documents__body {
   padding: 30px 60px 30px 30px;
@@ -612,7 +620,7 @@ margin: 20px 0 40px;
   list-style-type: none;
   margin: 16px;
   padding: 16px;
-  background-color: #dcdcdc;
+  background-color: rgba(37, 97, 143, 0.2);
   border-radius: 7px;
 }
 
@@ -646,9 +654,9 @@ margin: 20px 0 40px;
 
 .accordion-body {
   padding: 30px 60px 30px 30px;
-  background-color: #f1f1f1;
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
+  background-color: rgba(37, 97, 143, 0.2);
+  /* border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px; */
   font-size: 20px;
   color: #393939;
 }
@@ -670,10 +678,15 @@ margin: 20px 0 40px;
 }
 
 .dues__wrapper {
-  margin: 20px 15px;
+  margin: 50px 0px;
+  padding: 0 40px;
+}
+.links__list {
+  display: block;
 }
 
 .doc__links {
+  display: block;
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -688,6 +701,26 @@ margin: 20px 0 40px;
   align-items: center;
 }
 
+.link_to_doc {
+  margin: 20px;
+  text-decoration: none;
+  background-color: rgba(37, 97, 143, 0.2);
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_of_doc {
+  max-width: 60vh;
+}
+
 .doc__button {
   margin: 10px 15px;
 }
@@ -696,7 +729,34 @@ margin: 20px 0 40px;
   max-height: 140vh;
 }
 
+.annotationLayer {
+  height: 0px;
+  width: 0px;
+}
+
+.doc__text {
+  z-index: 100;
+}
+
 .egrul__container {
   display: flex;
   flex-direction: column;
+}
+
+.button__wrapper {
+  /* position: relative; */
+  margin: 17px;
+  opacity: .5;
+}
+
+.button__link {
+  /* position: absolute;
+  top: 50%; */
+  /* background-image: url(./images/arrowup.ico);
+  transform: rotate(-90deg); */
+  padding: 11px 9px;
+  color: #939fa7;
+  background-color: rgba(37, 97, 143, 0.2);
+  border: none;
+  border-radius: 5px;
 }

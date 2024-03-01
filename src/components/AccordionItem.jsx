@@ -26,6 +26,9 @@ export const AccordionItem = ({ faqItem, onClick, isOpen }) => {
         <div className="accordion-body" ref={itemRef}>
           {faqItem.d}
         </div>
+        <div className="accordion-body" ref={itemRef}>
+          {faqItem.e}
+        </div>
       </div>
     </li>
   );

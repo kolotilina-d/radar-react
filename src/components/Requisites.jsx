@@ -5,14 +5,14 @@ export default function Requisites() {
         <li className="requisites__item_imp">Полное наименование</li>
         <li className="requisites__item">
           ТОВАРИЩЕСТВО СОБСТВЕННИКОВ НЕДВИЖИМОСТИ САДОВОДЧЕСКОЕ НЕКОММЕРЧЕСКОЕ
-          ТОВАРИЩЕСТВО «РАДАР»
+          ТОВАРИЩЕСТВО &#171;РАДАР&#187;
         </li>
         <li className="requisites__item_imp">Сокращенное наименование</li>
-        <li className="requisites__item">СНТ «РАДАР»</li>
+        <li className="requisites__item">СНТ &#171;РАДАР&#187;</li>
         <li className="requisites__item_imp">Юридический адрес</li>
         <li className="requisites__item">
           238530, Калининградская область, Зеленоградский район, п. Орехово,
-          территория СНТ «РАДАР»
+          территория СНТ &#171;РАДАР&#187;
         </li>
         <li className="requisites__item_imp">Почтовый адрес</li>
         <li className="requisites__item">

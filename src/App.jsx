@@ -13,6 +13,7 @@ import DocumentsItem2 from "./components/DocumentsItem2";
 import DocumentsItem3 from "./components/DocumentsItem3";
 import DocumentsItem4 from "./components/DocumentsItem4";
 import DocumentsItem5 from "./components/DocumentsItem5";
+import DocumentsItem6 from "./components/DocumentsItem6";
 
 function App() {
   return (
@@ -44,7 +45,7 @@ function App() {
         </header>
         <section className="heading">
           <h1 className="heading__name">
-            САДОВОДЧЕСКОЕ НЕКОММЕРЧЕСКОЕ ТОВАРИЩЕСТВО &quot;РАДАР&quot;
+            САДОВОДЧЕСКОЕ НЕКОММЕРЧЕСКОЕ ТОВАРИЩЕСТВО &#171;РАДАР&#187;
           </h1>
         </section>
         <nav className="menu">
@@ -74,6 +75,7 @@ function App() {
           <Route path="/doc3" element={<DocumentsItem3/>} />
           <Route path="/doc4" element={<DocumentsItem4/>} />
           <Route path="/doc5" element={<DocumentsItem5/>} />
+          <Route path="/doc6" element={<DocumentsItem6/>} />
         </Routes>
         <Footer />
         <section>
