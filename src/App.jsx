@@ -14,8 +14,18 @@ import DocumentsItem3 from "./components/DocumentsItem3";
 import DocumentsItem4 from "./components/DocumentsItem4";
 import DocumentsItem5 from "./components/DocumentsItem5";
 import DocumentsItem6 from "./components/DocumentsItem6";
+import NavTab from "./components/NavTab";
+import { useState } from "react";
 
 function App() {
+  const [isNavActive, setIsNavActive] = useState(false);
+  function handleOpenNavTab() {
+    setIsNavActive(true);
+  }
+  function handleCloseNavTab() {
+    setIsNavActive(false);
+  }
+
   return (
     <div className="App">
       <>
@@ -44,11 +54,14 @@ function App() {
           </ul>
         </header>
         <section className="heading">
-          <h1 className="heading__name">
-            САДОВОДЧЕСКОЕ НЕКОММЕРЧЕСКОЕ ТОВАРИЩЕСТВО &#171;РАДАР&#187;
-          </h1>
+          <h1 className="heading__name">СНТ &#171;РАДАР&#187;</h1>
         </section>
         <nav className="menu">
+          <div className="headerForUser__nav">
+            <button className="navButton" onClick={() => handleOpenNavTab()}>
+              <span className="navButton__icon"></span>
+            </button>
+          </div>
           <Link className="menu__link" to="/requisites">
             <li className="menu__item">Реквизиты товарищества</li>
           </Link>
@@ -70,14 +83,19 @@ function App() {
           <Route path="/energy" element={<Energy />} />
           <Route path="/requisites" element={<Requisites />} />
           <Route path="/dues" element={<Dues />} />
-          <Route path="/doc1" element={<DocumentsItem1/>} />
-          <Route path="/doc2" element={<DocumentsItem2/>} />
-          <Route path="/doc3" element={<DocumentsItem3/>} />
-          <Route path="/doc4" element={<DocumentsItem4/>} />
-          <Route path="/doc5" element={<DocumentsItem5/>} />
-          <Route path="/doc6" element={<DocumentsItem6/>} />
+          <Route path="/doc1" element={<DocumentsItem1 />} />
+          <Route path="/doc2" element={<DocumentsItem2 />} />
+          <Route path="/doc3" element={<DocumentsItem3 />} />
+          <Route path="/doc4" element={<DocumentsItem4 />} />
+          <Route path="/doc5" element={<DocumentsItem5 />} />
+          <Route path="/doc6" element={<DocumentsItem6 />} />
         </Routes>
         <Footer />
+        <NavTab
+          setIsNavActive={setIsNavActive}
+          active={isNavActive}
+          handleCloseNavTab={handleCloseNavTab}
+        />
         <section>
           <div className="popup popup_rates">
             <div className="popup__container">
