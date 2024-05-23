@@ -18,7 +18,7 @@ form * {
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   margin: 0 auto;
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 .header {
@@ -254,8 +254,13 @@ form * {
 .important__item {
   margin: 10px 0;
   font-size: 1.3em;
-  padding: 15px 0;
+  padding: 15px 10px;
   text-align: justify;
+}
+
+.important__item:nth-child(2n) {
+  background-color: rgba(207, 227, 245, .5);
+  border-radius: 15px;
 }
 
 @media screen and (max-width: 1250px) {

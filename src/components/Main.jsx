@@ -33,6 +33,25 @@ function Main() {
           <div className="important">
             <ul className="important__list">
               <li className="important__item" style={{ textAlign: "center" }}>
+                <p className="important__item">
+                  «Уважаемые садоводы, на общем собрании Правления СНТ «РАДАР»
+                  07.04.2024 г. принято решение не проводить Общее собрание
+                  членов СНТ «РАДАР» в весенний период 2024 г.
+                </p>
+                <p className="important__item">
+                  Напоминаем о необходимости оплаты членских взносов за 2024 год
+                  до 01.05.2024 г.
+                </p>
+                <p className="important__item">
+                  Просим своевременно окашивать земельные участки и прилегающие
+                  дренажные канавы.
+                </p>
+                <p className="important__item">
+                  Заявки на установку фонарей направляются Председателю СНТ
+                  «РАДАР».
+                </p>
+              </li>
+              <li className="important__item" style={{ textAlign: "center" }}>
                 ВНИМАНИЕ ПРОТИВОПОЖАРНЫЙ РЕЖИМ !!!
               </li>
               <div className="important__img">
