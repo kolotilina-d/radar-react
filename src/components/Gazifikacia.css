@@ -1,0 +1,23 @@
+.gaz {
+  padding: 30px;
+  font-size: 1.3em;
+  line-height: 1.7em;
+}
+.gaz__title {
+  text-align: center;
+  margin-top: 10px;
+  color: red;
+  text-shadow: 2px 2px 3px pink;
+  font-size: 1.3em;
+
+}
+@media screen and (max-width: 400px) {
+  .gaz__title {
+    font-size: 1em;
+  }
+}
+.gaz__img {
+  width: 70vw;
+  display: block;
+  margin: 20px auto;
+}

@@ -27,6 +27,20 @@ export default function Dues() {
         </ul>
         <div className="dues__wrapper">
           <h3 className="item__subtitle" style={{textAlign: "center"}}>
+            СРОК ОПЛАТЫ И РАЗМЕР ВЗНОСОВ ЗА 2025 г.
+          </h3>
+          <p className="text">
+            Срок оплаты установлен не позднее 01.04.2025 г. Сумма 740,00 руб. за
+            одну сотку членский взнос, 260,00 руб. за одну сотку целевой взнос.
+            Всего за участок 6 соток сумма взносов 6 000,00 руб.
+          </p>{" "}
+          <p className="text">
+            Протокол очередного общего собрания членов СНТ &#171;РАДАР&#187; от
+            03.11.2024 г.
+          </p>
+        </div>
+        <div className="dues__wrapper">
+          <h3 className="item__subtitle" style={{textAlign: "center"}}>
             СРОК ОПЛАТЫ И РАЗМЕР ВЗНОСОВ ЗА 2024 г.
           </h3>
           <p className="text">

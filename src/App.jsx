@@ -14,6 +14,7 @@ import DocumentsItem3 from "./components/DocumentsItem3";
 import DocumentsItem4 from "./components/DocumentsItem4";
 import DocumentsItem5 from "./components/DocumentsItem5";
 import DocumentsItem6 from "./components/DocumentsItem6";
+import Gazifikacia from "./components/Gazifikacia";
 import NavTab from "./components/NavTab";
 import { useState } from "react";
 
@@ -46,11 +47,6 @@ function App() {
                 Контакты
               </Link>
             </li>
-            {/* <li className="header__item">
-              <Link to="/gallery" className="header__link">
-                Галерея
-              </Link>
-            </li> */}
           </ul>
         </header>
         <section className="heading">
@@ -89,6 +85,7 @@ function App() {
           <Route path="/doc4" element={<DocumentsItem4 />} />
           <Route path="/doc5" element={<DocumentsItem5 />} />
           <Route path="/doc6" element={<DocumentsItem6 />} />
+          <Route path="/gaz" element={<Gazifikacia/>}/>
         </Routes>
         <Footer />
         <NavTab
